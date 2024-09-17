@@ -3,18 +3,18 @@ channels:
   - conda-forge
 dependencies:
   - python=3.12.5
-  - black
-  - flake8
-  - isort
-  - pip
-  - ipython
-  - jupyterlab
-  - matplotlib
-  - notebook
-  - numpy
-  - pandas
-  - scikit-learn
-  - gh
+  - black=24.80
+  - flake8=7.1.1
+  - isort=5.13.2
+  - pip=24.2
+  - ipython=8.27.0
+  - jupyterlab=4.2.5
+  - matplotlib=3.9.2
+  - notebook=7.2.2
+  - numpy=2.1.1
+  - pandas=2.2.2
+  - scikit-learn=1.5.2
+  - gh=2.57.0
   - pip:
     - python-dotenv
     - mkdocs
