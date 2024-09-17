@@ -14,6 +14,7 @@ dependencies:
   - numpy
   - pandas
   - scikit-learn
+  - gh
   - pip:
     - python-dotenv
     - mkdocs
