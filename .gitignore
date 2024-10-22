@@ -1,5 +1,5 @@
 # Data
-/data/
+#/data/
 
 # Mac OS-specific storage files
 .DS_Store
@@ -86,9 +86,6 @@ docs/site/
 # PyBuilder
 .pybuilder/
 target/
-
-# Jupyter Notebook
-.ipynb_checkpoints
 
 # IPython
 profile_default/
