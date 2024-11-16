@@ -8,7 +8,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import FunctionTransformer
 
-from constants import NUM_FEATURES, CAT_FEATURES, FEATURES
+from constants import NUM_FEATURES, CAT_FEATURES
 
 ######################### TRANSFORMATIONS #########################
 OVER = SMOTE(sampling_strategy="auto")
@@ -18,20 +18,19 @@ CAT_PIPE = Pipeline(steps=[
     ('binary_encoder', BinaryEncoder())
 ])
 
-NUM_PIPE = Pipeline(steps=[
-    ('scaler', StandardScaler())
-])
+num_steps = [
+        ('scaler', StandardScaler()),
+        ('imputer', KNNImputer(n_neighbors=5)),
+]
 
-FILL_PIPE = Pipeline(steps=[
-    ('imputer', KNNImputer(n_neighbors=5))
-])
+NUM_PIPE = Pipeline(steps=num_steps)
+
 
 ####################### PREPROCESSORS #######################
 FEAT_SEL_PRE = ColumnTransformer(
     transformers=[
         ('num', NUM_PIPE, NUM_FEATURES),
         ('cat', CAT_PIPE, CAT_FEATURES), 
-        ('fill', FILL_PIPE, FEATURES)
         ('array', FunctionTransformer(lambda X: X.values, validate=False), [])
     ]
 )
