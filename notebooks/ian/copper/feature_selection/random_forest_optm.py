@@ -16,11 +16,6 @@ warnings.filterwarnings(
     category=np.VisibleDeprecationWarning,
 )
 
-warnings.filterwarnings(
-    "ignore",
-    category=np.DeprecationWarning,
-)
-
 ##########################################################################################
 
 
@@ -35,9 +30,9 @@ def objective(trial):
 
     pipe = ImbPipeline(steps_list)
 
-    early_prune(pipe, X_train, y_train)
+    early_prune(pipe, X_train, y_train.values.ravel())
 
-    scores = cross_val_score(pipe, X_train, y_train, cv=RKF, scoring="roc_auc")
+    scores = cross_val_score(pipe, X_train, y_train.values.ravel(), cv=RKF, scoring="roc_auc")
 
     score1, score2 = optm_score(scores)
 
@@ -60,8 +55,8 @@ if __name__ == "__main__":
 
     study = optuna.create_study(
         directions=['maximize', 'minimize'],
-        storage='sqlite:///xgboost.db',
-        study_name="xgboost",
+        storage='sqlite:///random_forest.db',
+        study_name="random_forest",
         load_if_exists=True,
         sampler=SAMPLER
     )

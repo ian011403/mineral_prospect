@@ -19,7 +19,7 @@ def search_space_decision_tree(trial):
 
 def search_space_xgboost(trial):
     params = dict()
-    params['n_estimators'] = trial.suggest_int('n_estimators', 1, 500, log = True)
+    params['n_estimators'] = trial.suggest_int('n_estimators', 1, 50, log = True)
     params['max_depth'] = trial.suggest_int('max_depth', 2, 6)
     params['learning_rate'] = trial.suggest_float('learning_rate', 0.01, 0.2)
     params['min_child_weight'] = trial.suggest_int('min_child_weight', 1, 5)
@@ -36,7 +36,7 @@ def search_space_xgboost(trial):
 
 def search_space_random_forest(trial):
     params = dict()
-    params['n_estimators'] = trial.suggest_int('n_estimators', 1, 100)
+    params['n_estimators'] = trial.suggest_int('n_estimators', 1, 50)
     params['max_depth'] = trial.suggest_int('max_depth', 2, 7)
     params['max_features'] = trial.suggest_int('max_features', 1, 27)
     params['min_samples_split'] = trial.suggest_int('min_samples_split', 2, 50)

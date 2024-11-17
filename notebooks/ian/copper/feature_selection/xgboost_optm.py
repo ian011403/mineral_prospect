@@ -61,4 +61,4 @@ if __name__ == "__main__":
         sampler=SAMPLER
     )
 
-    study.optimize(objective, n_trials=10000, n_jobs=-1)
+    study.optimize(objective, n_trials=9000, n_jobs=-1)
