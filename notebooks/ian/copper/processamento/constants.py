@@ -1,9 +1,11 @@
+"""Constants for copper data processing"""
+
 RENAME_DICT = {
     'Property Name': 'PROPERTY_NM',
     'Activity Status': 'ACTIVITY_STATUS',
     'Mine Type 1': 'MINE_TYPE',
     'Initial Capital Cost\r\n($M)': 'INITIAL_COST',
-    'NPV Discount % - Base Case\r\n(%)': 'NPV_DISCOUNT', #
+    'NPV Discount % - Base Case\r\n(%)': 'NPV_DISCOUNT', 
     'Post-Tax IRR % - Base Case\r\n(%)': 'TIR',
     'Study Price per tonne - Base Case\r\n($/tonne)': 'PRICE_PER_TONNE_MAIN_ORE',
     'Geologic Ore Body Type': 'GEOLOGIC_ORE_BODY_TYPE',
@@ -26,26 +28,24 @@ NUM_FEATURES = [
         "COPPER_GRADE",
         "INITIAL_COST",
         "ORE_TONNAGE",
-        "PRECIOUS_TONNAGE",
+        "PRECIOUS_GRAMS",
         "COPPER_TONNAGE",
-        "ECONOMIC_TONNAGE",
-        "GOLD_TONNAGE",
-        "SILVER_TONNAGE",
-        'INITIAL_COST_PER_TONNE',
+        "ECONOMIC_AMOUNT",
+        "GOLD_GRAMS",
+        "SILVER_GRAMS",
+        'INITIAL_COST_PER_AMOUNT',
         "LOG_10_GOLD_DENSITY",
         "LOG_10_SILVER_DENSITY",
         "LOG_10_PRECIOUS_ORE_DENSITY",
         "LOG_10_COPPER_GRADE",
         "LOG_10_INITIAL_COST",
         "LOG_10_ORE_TONNAGE",
-        "LOG_10_PRECIOUS_TONNAGE",
+        "LOG_10_PRECIOUS_GRAMS",
         "LOG_10_COPPER_TONNAGE",
-        "LOG_10_ECONOMIC_TONNAGE",
-        "LOG_10_GOLD_TONNAGE",
-        "LOG_10_SILVER_TONNAGE",
-        'LOG_10_INITIAL_COST_PER_TONNE'
-        #Capacidade de processamento
-        #"PRICE_PER_TONNE_MAIN_ORE",
+        "LOG_10_ECONOMIC_AMOUNT",
+        "LOG_10_GOLD_GRAMS",
+        "LOG_10_SILVER_GRAMS",
+        'LOG_10_INITIAL_COST_PER_AMOUNT'
     ]
 
 TO_LOG10 = [
@@ -55,12 +55,12 @@ TO_LOG10 = [
     "COPPER_GRADE",
     "INITIAL_COST",
     "ORE_TONNAGE",
-    "PRECIOUS_TONNAGE",
+    "PRECIOUS_GRAMS",
     "COPPER_TONNAGE",
-    "ECONOMIC_TONNAGE",
-    "GOLD_TONNAGE",
-    "SILVER_TONNAGE",
-    'INITIAL_COST_PER_TONNE',
+    "ECONOMIC_AMOUNT",
+    "GOLD_GRAMS",
+    "SILVER_GRAMS",
+    'INITIAL_COST_PER_AMOUNT',
 
 ]
 
@@ -80,24 +80,3 @@ LOG_INF_REPL = -100
 UPPER_LIMIT_TIR = 125
 
 MIN_TIR = 15
-
-NUM_SELECTED = ['COPPER_GRADE', 'GOLD_DENSITY',
-       'LOG_10_COPPER_GRADE', 'INITIAL_COST_PER_TONNE', 'INITIAL_COST',
-       'LOG_10_GOLD_DENSITY', 'LOG_10_INITIAL_COST',
-       'LOG_10_INITIAL_COST_PER_TONNE']
-
-CAT_SELECTED = ['GLOBAL_REGION_2', 'GLOBAL_REGION_0']
-
-SELECTED_FEATURES = NUM_SELECTED + CAT_SELECTED
-
-
-RANDOM_FOREST_PARAMS = {
-    "n_estimators":6,
-    "max_depth":5,
-    "max_features":1,
-    "min_samples_split":50,
-    "min_samples_leaf":4,
-    "random_state":17,
-    "n_jobs":-1,
-    "class_weight":'balanced'
-}
