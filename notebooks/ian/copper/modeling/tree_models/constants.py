@@ -5,26 +5,24 @@ NUM_FEATURES = [
         "COPPER_GRADE",
         "INITIAL_COST",
         "ORE_TONNAGE",
-        "PRECIOUS_TONNAGE",
+        "PRECIOUS_GRAMS",
         "COPPER_TONNAGE",
-        "ECONOMIC_TONNAGE",
-        "GOLD_TONNAGE",
-        "SILVER_TONNAGE",
-        'INITIAL_COST_PER_TONNE',
+        "ECONOMIC_AMOUNT",
+        "GOLD_GRAMS",
+        "SILVER_GRAMS",
+        'INITIAL_COST_PER_AMOUNT',
         "LOG_10_GOLD_DENSITY",
         "LOG_10_SILVER_DENSITY",
         "LOG_10_PRECIOUS_ORE_DENSITY",
         "LOG_10_COPPER_GRADE",
         "LOG_10_INITIAL_COST",
         "LOG_10_ORE_TONNAGE",
-        "LOG_10_PRECIOUS_TONNAGE",
+        "LOG_10_PRECIOUS_GRAMS",
         "LOG_10_COPPER_TONNAGE",
-        "LOG_10_ECONOMIC_TONNAGE",
-        "LOG_10_GOLD_TONNAGE",
-        "LOG_10_SILVER_TONNAGE",
-        'LOG_10_INITIAL_COST_PER_TONNE'
-        #Capacidade de processamento
-        #"PRICE_PER_TONNE_MAIN_ORE",
+        "LOG_10_ECONOMIC_AMOUNT",
+        "LOG_10_GOLD_GRAMS",
+        "LOG_10_SILVER_GRAMS",
+        'LOG_10_INITIAL_COST_PER_AMOUNT'
     ]
 
 CAT_FEATURES = [
