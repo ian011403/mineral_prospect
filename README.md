@@ -4,7 +4,7 @@
     <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
 </a>
 
-The purpose of this project is to research and develop an ore mine prospector to evaluate the profitability of an ore mine being explored. This prospection solution takes incomplete descriptions of the ore mines being explored to estimate their profitability based on complete data about profitable and already explored mines.
+The purpose of this project is to research and develop an ore mine prospector to evaluate the profitability of an ore mine being explored. This prospection solution takes incomplete descriptions of the ore mines being explored to estimate their profitability based on complete data about already explored mines.
 
 ## Project Organization
 
